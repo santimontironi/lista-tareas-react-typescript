@@ -1,50 +1,24 @@
-# React + TypeScript + Vite
+# Aplicación de Lista de Tareas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Despliegue
 
-Currently, two official plugins are available:
+https://listatareasreactts.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descripción
 
-## Expanding the ESLint configuration
+Esta es una aplicación de lista de tareas simple desarrollada con React y TypeScript. Permite a los usuarios agregar, visualizar y eliminar tareas de una lista. La aplicación está diseñada para ser fácil de usar y demuestra conceptos básicos de React, gestión de estado y componentes funcionales.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Características
 
-- Configure the top-level `parserOptions` property like this:
+- **Agregar Tareas**: Permite a los usuarios ingresar nuevas tareas a través de un campo de texto.
+- **Listar Tareas**: Muestra todas las tareas ingresadas en una lista.
+- **Eliminar Tareas**: Permite a los usuarios eliminar tareas específicas de la lista.
+- **Interfaz Intuitiva**: La interfaz es simple y fácil de usar.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tecnologías Utilizadas
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **TypeScript**: Superset de JavaScript que agrega tipado estático.
+- **CSS**: Estilos personalizados para la aplicación.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
